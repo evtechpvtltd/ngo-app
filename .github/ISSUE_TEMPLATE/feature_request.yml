@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a feature or enhancement
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before requesting a large feature (gallery, video uploads,
+        livestream, payments, ...), check `docs/context.md` and
+        `docs/app.md #28` (Build Order) — it may already be planned for a
+        specific future release, in which case a comment there is more
+        useful than a new issue.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the use case, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: constitution
+    attributes:
+      label: Architecture check
+      options:
+        - label: I've checked this doesn't conflict with docs/app.md
+          required: false

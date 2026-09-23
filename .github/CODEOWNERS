@@ -1,0 +1,15 @@
+# Code owners — GitHub requests a review from these owners automatically.
+#
+# NOTE: replace the placeholder below with real GitHub usernames/teams once
+# this repository is published and maintainers have GitHub accounts
+# associated with the project. An email only works here if it's a verified
+# address on the owner's GitHub account.
+
+* ceo@evtech.org.in
+
+# Security-sensitive paths may eventually warrant a narrower, more senior
+# owner list than the repository default above:
+# /supabase/migrations/   @security-team
+# /supabase/tests/        @security-team
+# /lib/supabase/admin.ts  @security-team
+# /middleware.ts          @security-team

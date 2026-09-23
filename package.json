@@ -1,0 +1,56 @@
+{
+  "name": "bhoirwadi-sanskritik-association",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Bhoirwadi Sanskritik Association - open-source Progressive Native Web App (PNWA) foundation.",
+  "license": "SEE LICENSE IN docs/architecture/LICENSE-DECISION.md",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "predev": "npm run build:sw",
+    "dev": "next dev",
+    "prebuild": "npm run build:sw",
+    "build": "next build",
+    "start": "next start",
+    "build:sw": "esbuild service-worker/sw.ts --bundle --outfile=public/sw.js --format=iife --target=es2020",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.47.10",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "idb": "^8.0.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^2.5.5",
+    "zod": "^3.24.1"
+  },
+  "overrides": {
+    "postcss": "^8.5.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.3",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

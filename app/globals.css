@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 8%;
+    --primary: 24 74% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 24 20% 94%;
+    --secondary-foreground: 24 30% 15%;
+    --muted: 24 10% 95%;
+    --muted-foreground: 24 6% 40%;
+    --accent: 24 20% 92%;
+    --accent-foreground: 24 30% 15%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 10% 88%;
+    --input: 24 10% 88%;
+    --ring: 24 74% 42%;
+    --radius: 0.625rem;
+  }
+
+  [data-theme="dark"] {
+    --background: 20 14% 6%;
+    --foreground: 24 10% 96%;
+    --card: 20 14% 9%;
+    --card-foreground: 24 10% 96%;
+    --primary: 24 74% 55%;
+    --primary-foreground: 20 14% 6%;
+    --secondary: 20 10% 16%;
+    --secondary-foreground: 24 10% 96%;
+    --muted: 20 10% 14%;
+    --muted-foreground: 24 6% 65%;
+    --accent: 20 10% 18%;
+    --accent-foreground: 24 10% 96%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 24 74% 55%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --background: 20 14% 6%;
+      --foreground: 24 10% 96%;
+      --card: 20 14% 9%;
+      --card-foreground: 24 10% 96%;
+      --primary: 24 74% 55%;
+      --primary-foreground: 20 14% 6%;
+      --secondary: 20 10% 16%;
+      --secondary-foreground: 24 10% 96%;
+      --muted: 20 10% 14%;
+      --muted-foreground: 24 6% 65%;
+      --accent: 20 10% 18%;
+      --accent-foreground: 24 10% 96%;
+      --destructive: 0 62% 55%;
+      --destructive-foreground: 0 0% 100%;
+      --border: 20 10% 20%;
+      --input: 20 10% 20%;
+      --ring: 24 74% 55%;
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    /* Let standalone/installed contexts draw edge-to-edge under notches. */
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100%;
+    /* Prevent the native pull-to-refresh / bounce chrome from fighting
+       with the app shell's own scroll containers (app.md #17). */
+    overscroll-behavior-y: none;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .min-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

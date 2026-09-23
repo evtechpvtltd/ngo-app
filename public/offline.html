@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Offline — Bhoirwadi Sanskritik Association</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        padding-top: max(24px, env(safe-area-inset-top));
+        padding-bottom: max(24px, env(safe-area-inset-bottom));
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: light-dark(#ffffff, #0a0a0a);
+        color: light-dark(#111111, #f5f5f5);
+        text-align: center;
+      }
+      main { max-width: 28rem; }
+      h1 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+      p { color: light-dark(#555555, #a3a3a3); line-height: 1.5; }
+      button {
+        margin-top: 1.5rem;
+        min-height: 44px;
+        padding: 0 20px;
+        border-radius: 8px;
+        border: 1px solid light-dark(#d4d4d4, #404040);
+        background: transparent;
+        color: inherit;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>You&rsquo;re offline</h1>
+      <p>
+        This page isn&rsquo;t available without a connection yet. Anything
+        you already had open, plus safe drafts, are preserved — reconnect
+        and we&rsquo;ll sync automatically.
+      </p>
+      <button type="button" onclick="window.location.reload()">Try again</button>
+    </main>
+  </body>
+</html>
